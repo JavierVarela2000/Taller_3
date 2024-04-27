@@ -25,27 +25,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movimiento);
 
 
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            Restart();
-        }
     }
 
 
-    private void Restart()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        // Iterar sobre cada objeto y cambiar su color
-        foreach (GameObject enemy in enemies)
-        {
-            // Verificar si el objeto tiene un componente Renderer
-            Renderer renderer = enemy.GetComponent<Renderer>();
-            if (renderer != null)
-            {
-                // Cambiar el color del cubo al color compartido
-                renderer.material.color = Color.white;
-            }
-        }
-    }
 }

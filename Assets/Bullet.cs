@@ -11,14 +11,10 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject,lifeTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter()
     {
         
         Destroy(gameObject);
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Renderer renderer = collision.gameObject.GetComponent<Renderer>();
-            renderer.material.color = Color.red;
-        }
+   
     }
 }
